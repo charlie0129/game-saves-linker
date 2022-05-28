@@ -70,7 +70,7 @@ When the game tries to access `%USERPROFILE%\AppData\Roaming\YuzuSoft\RiddleJoke
 
    
 
-3. **注意：**请先备份你现在的存档到一个安全的位置再继续！因为它们会被换成符号链接。
+3. **注意：** 请先备份你现在的存档到一个安全的位置再继续！因为它们会被换成符号链接。
 
    好了你现在备份好存档了。双击 `0LINKSAVES.CMD` （可能需要管理员权限）来链接 `.\SAVES` 到你游戏的默认位置。
 
