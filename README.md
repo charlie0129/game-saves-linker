@@ -41,6 +41,8 @@ Typically, you will put these scripts within your games' installation directory 
 
 4. Move your saves that you just backed up to `.\SAVES`. Now your saves are in their new locations, and your game will work as before.
 
+5. Although you probably do not need to do this, to remove the linked directory, run `1UNLINKSAVES.CMD`. (Relax, your saves in `.\SAVES` will not be affected.)
+
 Effect:
 
 In the example above, your saves are originally stored in `%USERPROFILE%\AppData\Roaming\YuzuSoft\RiddleJoker`. Now it is in `.\SAVES` (inside the installation directory of your game).
@@ -69,6 +71,8 @@ When the game tries to access `%USERPROFILE%\AppData\Roaming\YuzuSoft\RiddleJoke
    好了，双击 `0LINKSAVES.CMD` （可能需要管理员权限）来链接 `.\SAVES` 到你游戏的默认位置。
 
 4. 把你刚刚备份的存档移动到 `.\SAVES` 。现在你的存档就在新的位置了，同时你的游戏也能正常工作。
+
+5. 尽管你一般不需要删除链接的目录，如果你需要的话运行 `1UNLINKSAVES.CMD` 即可。（放心，你在 `.\SAVES` 里面的存档不会被删除。）
 
 效果：
 
