@@ -1,23 +1,31 @@
 # game-saves-linker
 Game saves linker for galgames (and other games).
 
+Galgame（或者其他游戏的）游戏存档链接器
+
 ## What does it do?
 
-Just as the repo name implies, it will link you games' saves to your custom location (instead of some random default path).
+Just as the repo name implies, it will link you games' saves to your custom location (instead of some random default paths of your game).
 
-Some games store their saves in a default path (and you cannot change it). But, who wants their precious saves stored in C: drive where you cannot even find them. If you forgot to back them up and did a fresh install of Windows, and now you are SCREWED!
+Some games store their saves in a default path (and you cannot change it). But, who wants their precious saves stored in C: drive where you cannot even find them. I cannot resume my game if I am on a new machine. What's more, if you forgot to back them up and did a fresh install of Windows, and now you are SCREWED!
 
 Using directory symbolic links, this script solves this problem by making the game believe that it is saving to the default path, but instead, the saves are written to you custom location (currently in `SAVES` folder that is along side this script; will allow custom locations if there is a need).
+
+正如名字所说，它会把你游戏存档链接到你自定义的地方（而不是游戏莫名其妙的默认路径）。
+
+有些游戏会把它们的存档放在默认路径里（而且你不能改！），但是谁会想把我的珍贵存档放在 C 盘一个我根本找不到的地方呢？这样我换台机器就不能继续我的游戏了。而且万一你忘了备份，然后全新安装了 Windows ，那你就没了！
+
+这个脚本就是为了解决这个问题的，用目录符号链接来让你的游戏误以为它把存档放在了默认位置，而实际上它已经在你想要的位置了（目前在脚本旁边的 `SAVES` 文件夹；以后会支持自定义文件夹）。
 
 ## How to use it?
 
 This script will link your games' default saves directory to `.\SAVES` (alongside where you put these scripts).
 
-Typically, you will put these scripts within your games' installation directory, so that all saves are also alongside your game. So you can easily find and backup them.
+Typically, you will put these scripts within your games' installation directory (for galgames), so that all saves are also alongside your game. Also, you will store your game to somewhere you have all your galgames backed up, so you can easily find your saves and resume where you left off on a different machine.
 
 1. Copy these three files `0LINKSAVES.CMD`, `1UNLINKSAVES.CMD`, and `2SAVEPATH.CMD` to your games' installation directory.
 
-2. Open and edit `2SAVEPATH.CMD`. You need to specify the default location of your saves, otherwise I have no idea where to link your saves to. See the example for Riddle Joker inside this file.
+2. Open and edit `2SAVEPATH.CMD`. You need to specify the default save location of your game, otherwise I have no idea where to link your saves. See the example for Riddle Joker inside this file.
 
    ```batch
    REM Echo the default save path of the game like this,
@@ -35,9 +43,29 @@ Typically, you will put these scripts within your games' installation directory,
 
 Effect:
 
-In the example above, your saves are originally stored in `%USERPROFILE%\AppData\Roaming\YuzuSoft\RiddleJoker`. Now it is in `.\SAVES` (where you put this script).
+In the example above, your saves are originally stored in `%USERPROFILE%\AppData\Roaming\YuzuSoft\RiddleJoker`. Now it is in `.\SAVES` (inside the installation directory of your game).
 
 When the game tries to access `%USERPROFILE%\AppData\Roaming\YuzuSoft\RiddleJoker`, it is actually accessing `.\SAVES`. So even if you moved your saves, your game will continue to work.
+
+这个脚本会将你的游戏的默认存档位置链接到 `.\SAVES` ，也就是你放脚本的地方的 `SAVES` 文件夹里。
+
+一般来说，你会把这些脚本放在游戏安装目录下面（比如 Galgame），这样你的所有存档就在你的游戏安装目录里了。而且你也会把你的游戏放在你放所有 galgame 备份的地方，这样就方便你找到并备份存档了，你也能很轻易地在新机器上继续玩之前的存档。
+
+1. 复制这些脚本 `0LINKSAVES.CMD`, `1UNLINKSAVES.CMD` 和 `2SAVEPATH.CMD` 到你的游戏的安装目录下。
+
+2. 编辑 `2SAVEPATH.CMD` ，你需要指定你的游戏的默认存档路径，不然我不知道怎么链接过去。可以看看样例， Riddle Joker 是怎么设置的。
+
+3. 注意：请先备份你现在的存档再继续！
+
+   好了，双击 `0LINKSAVES.CMD` （可能需要管理员权限）来链接 `.\SAVES` 到你游戏的默认位置。
+
+4. 把你刚刚备份的存档移动到 `.\SAVES` 。现在你的存档就在新的位置了，同时你的游戏也能正常工作。
+
+效果：
+
+在上面的样例里，你的存档原先在 `%USERPROFILE%\AppData\Roaming\YuzuSoft\RiddleJoker` ，但是现在在你游戏安装目录下的 `SAVES` 文件夹了。
+
+当你的游戏尝试访问 `%USERPROFILE%\AppData\Roaming\YuzuSoft\RiddleJoker` 的时候，它其实在访问 `.\SAVES` 。这样的话即便你已经移动了存档位置，你的游戏也会正常工作。
 
 ## FAQ
 
