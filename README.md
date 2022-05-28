@@ -55,6 +55,15 @@ When the game tries to access `%USERPROFILE%\AppData\Roaming\YuzuSoft\RiddleJoke
 
 2. 编辑 `2SAVEPATH.CMD` ，你需要指定你的游戏的默认存档路径，不然我不知道怎么链接过去。可以看看样例， Riddle Joker 是怎么设置的。
 
+   ```batch
+   REM 像这样 echo 你游戏的默认存档位置，它会被链接到 .\SAVES
+   REM 末尾 **不要** 加上反斜杠
+   REM 你可以用环境变量来进行更加动态的配置（例如下面的例子）
+   ECHO %USERPROFILE%\AppData\Roaming\YuzuSoft\RiddleJoker
+   ```
+
+   
+
 3. 注意：请先备份你现在的存档再继续！
 
    好了，双击 `0LINKSAVES.CMD` （可能需要管理员权限）来链接 `.\SAVES` 到你游戏的默认位置。
