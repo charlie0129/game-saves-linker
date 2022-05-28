@@ -64,7 +64,7 @@ When the game tries to access `%USERPROFILE%\AppData\Roaming\YuzuSoft\RiddleJoke
    ```batch
    REM 像这样 echo 你游戏的默认存档位置，它会被链接到 .\SAVES
    REM 末尾 **不要** 加上反斜杠
-   REM 你可以用环境变量来进行更加动态的配置（例如下面的例子）
+   REM 你可以用环境变量来进行更加灵活的配置（例如下面的例子）
    ECHO %USERPROFILE%\AppData\Roaming\YuzuSoft\RiddleJoker
    ```
 
