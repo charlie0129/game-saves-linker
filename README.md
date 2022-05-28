@@ -35,9 +35,9 @@ Typically, you will put these scripts within your games' installation directory 
    ECHO %USERPROFILE%\AppData\Roaming\YuzuSoft\RiddleJoker
    ```
 
-3. IMPORTANT: back up your current saves before doing this step!
+3. **IMPORTANT:** Back up your current saves to a safe location before doing this step! Since they will be replaced with symbolic links.
 
-   Done! Double click `0LINKSAVES.CMD` (possibly with administrator privileges) to link `.\SAVES` to the default location of your game.
+   Now you have backed up your saves. Double click `0LINKSAVES.CMD` (possibly with administrator privileges) to link `.\SAVES` to the default location of your game.
 
    Now your game directory will look like this, will these 4 highlighted items:
 
@@ -70,9 +70,9 @@ When the game tries to access `%USERPROFILE%\AppData\Roaming\YuzuSoft\RiddleJoke
 
    
 
-3. 注意：请先备份你现在的存档再继续！
+3. **注意：**请先备份你现在的存档到一个安全的位置再继续！因为它们会被换成符号链接。
 
-   好了，双击 `0LINKSAVES.CMD` （可能需要管理员权限）来链接 `.\SAVES` 到你游戏的默认位置。
+   好了你现在备份好存档了。双击 `0LINKSAVES.CMD` （可能需要管理员权限）来链接 `.\SAVES` 到你游戏的默认位置。
 
    现在你的游戏目录会看起来像这样，多了这 4 个高亮的项目：
 
