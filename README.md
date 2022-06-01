@@ -39,7 +39,7 @@ Typically, you will put these scripts within your games' installation directory 
 
    Now you have backed up your saves. Double click `0LINKSAVES.CMD` (possibly with administrator privileges) to link `.\SAVES` to the default location of your game.
 
-   Now your game directory will look like this, will these 4 highlighted items:
+   Now your game directory will look like this, with these 4 highlighted items:
 
    ![dir-structure-example](readme-images/dir-structure-example.png)
 
